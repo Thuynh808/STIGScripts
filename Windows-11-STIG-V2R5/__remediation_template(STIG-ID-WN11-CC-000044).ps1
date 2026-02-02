@@ -26,14 +26,15 @@
 #>
 
 # Policy-backed setting (what STIG checks)
+
 New-Item "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Network Connections" -Force | Out-Null
 Set-ItemProperty `
   "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Network Connections" `
-  -Name NC_AllowNetBridge_NLA `
+  -Name NC_ShowSharedAccessUI `
   -Type DWord `
   -Value 0
 
-# Quick verify
+# Verify
 Get-ItemProperty `
   "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Network Connections" `
-  -Name NC_AllowNetBridge_NLA
+  -Name NC_ShowSharedAccessUI
