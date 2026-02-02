@@ -25,14 +25,14 @@
     PS C:\> .\__remediation_template(STIG-ID-WN11-CC-000391).ps1 
 #>
 
-New-Item "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer" -Force | Out-Null
+New-Item "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Main" -Force | Out-Null
 Set-ItemProperty `
-  "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer" `
-  -Name DisableIEStandAlone `
+  "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Main" `
+  -Name NotifyDisableIEOptions `
   -Type DWord `
-  -Value 1
+  -Value 0
 
-# Verify
+# Quick verify
 Get-ItemProperty `
-  "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer" `
-  -Name DisableIEStandAlone
+  "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Main" `
+  -Name NotifyDisableIEOptions
