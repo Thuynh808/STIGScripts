@@ -7,7 +7,7 @@
     LinkedIn        : linkedin.com/in/thuynh808/
     GitHub          : github.com/thuynh808
     Date Created    : 2026-02-01
-    Last Modified   : 2026-02-01
+    Last Modified   : 2026-02-02
     Version         : 1.0
     CVEs            : N/A
     Plugin IDs      : N/A
@@ -38,3 +38,4 @@ Set-ItemProperty `
 Get-ItemProperty `
   "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Network Connections" `
   -Name NC_ShowSharedAccessUI
+
