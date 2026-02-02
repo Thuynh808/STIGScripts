@@ -6,8 +6,8 @@
     Author          : Thong Huynh
     LinkedIn        : linkedin.com/in/thuynh808/
     GitHub          : github.com/thuynh808
-    Date Created    : 2026-02-01
-    Last Modified   : 2026-02-01
+    Date Created    : 2026-02-02
+    Last Modified   : 2026-02-02
     Version         : 1.0
     CVEs            : N/A
     Plugin IDs      : N/A
@@ -28,4 +28,5 @@
 auditpol /set /subcategory:"Account Lockout" /failure:enable
 
 # Quick verify
+
 auditpol /get /subcategory:"Account Lockout"
